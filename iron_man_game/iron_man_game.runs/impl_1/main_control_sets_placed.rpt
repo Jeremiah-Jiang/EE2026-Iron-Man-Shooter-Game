@@ -1,0 +1,108 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Thu Apr  1 15:16:04 2021
+| Host         : DESKTOP-R4K9P6R running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file main_control_sets_placed.rpt
+| Design       : main
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    37 |
+| Unused register locations in slices containing registers |   140 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            4 |
+|      4 |            2 |
+|      6 |            1 |
+|      8 |            1 |
+|     10 |            2 |
+|     12 |            1 |
+|     14 |            2 |
+|    16+ |           24 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             124 |           38 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             956 |          136 |
+| Yes          | No                    | No                     |             964 |          249 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             392 |           67 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------+---------------------------+-----------------------------------+------------------+----------------+
+|      Clock Signal     |       Enable Signal       |          Set/Reset Signal         | Slice Load Count | Bel Load Count |
++-----------------------+---------------------------+-----------------------------------+------------------+----------------+
+|  fa4/fa0/set_freq     |                           |                                   |                1 |              2 |
+|  fa3/fa0/set_freq     |                           |                                   |                1 |              2 |
+|  freqfast             | fa2/an[2]_i_1_n_0         | fa2/an[3]_i_1_n_0                 |                1 |              2 |
+| ~clk_BUFG             |                           |                                   |                1 |              2 |
+|  dev2/dev1/set_freq   |                           |                                   |                1 |              4 |
+|  freqfast             |                           |                                   |                1 |              4 |
+|  freqfast             | fa2/an[2]_i_1_n_0         |                                   |                2 |              6 |
+|  clk_BUFG             | dev4/pixel_data_reg[15]_0 | dev3/pixel_data_reg[8]            |                3 |              8 |
+|  clk_BUFG             | dev4/pixel_data_reg[15]_0 | dev3/pixel_data_reg[4]            |                3 |             10 |
+|  clk_BUFG             | dev4/pixel_data_reg[15]_0 | dev3/pixel_data_reg[15]           |                3 |             10 |
+|  clk_BUFG             | sw_IBUF[7]                | dev4/ulti_timer[19]_i_1_n_0       |                2 |             12 |
+|  clk_BUFG             |                           |                                   |                3 |             14 |
+|  freqfast             | fa2/seg[6]_i_1_n_0        |                                   |                7 |             14 |
+|  CLOCK_IBUF_BUFG      |                           |                                   |                8 |             16 |
+|  fa0/CLK              |                           |                                   |                5 |             24 |
+| ~fa1/J_MIC3_Pin4_OBUF |                           |                                   |                7 |             24 |
+|  CLOCK_IBUF_BUFG      |                           | fa0/CLK                           |                3 |             24 |
+|  temp_reg[11]_i_2_n_0 |                           |                                   |               10 |             32 |
+| ~clk_BUFG             |                           | dev2/dev2/FSM_onehot_state_reg[0] |                4 |             34 |
+| ~clk_BUFG             | dev3/delay[0]_i_1_n_0     | dev2/dev2/FSM_onehot_state_reg[0] |                5 |             40 |
+|  clk_BUFG             | dev4/k_t[10]_i_1_n_0      |                                   |                8 |             44 |
+| ~clk_BUFG             | dev3/state                | dev2/dev2/FSM_onehot_state_reg[0] |               10 |             64 |
+|  freqfast             |                           | fa2/countfast[31]_i_1_n_0         |                9 |             64 |
+|  CLOCK_IBUF_BUFG      |                           | dev1/clear                        |               11 |             82 |
+|  CLOCK_IBUF_BUFG      |                           | fa0/clear                         |               11 |             82 |
+|  clk_BUFG             | sw_IBUF[7]                | dev4/count1[40]_i_1_n_0           |               12 |             82 |
+|  clk_BUFG             | sw_IBUF[7]                | dev4/count_drone2_spd[40]_i_1_n_0 |               11 |             82 |
+|  clk_BUFG             | sw_IBUF[7]                | dev4/count_drone_spd[40]_i_1_n_0  |               17 |             82 |
+|  clk_BUFG             |                           | dev4/count[40]_i_1_n_0            |               13 |             82 |
+|  CLOCK_IBUF_BUFG      |                           | dev2/dev1/clear                   |               11 |             82 |
+|  CLOCK_IBUF_BUFG      |                           | fa2/fa2/COUNT[0]_i_1__2_n_0       |               11 |             82 |
+|  CLOCK_IBUF_BUFG      |                           | fa2/fa1/clear                     |               11 |             82 |
+|  CLOCK_IBUF_BUFG      |                           | fa3/fa0/clear                     |               11 |             82 |
+|  CLOCK_IBUF_BUFG      |                           | fa4/fa0/clear                     |               11 |             82 |
+|  temp_reg[11]_i_2_n_0 |                           | fa2/fa2/CO[0]                     |               15 |             88 |
+| ~clk_BUFG             |                           | dev3/spi_word[39]_i_1_n_0         |               15 |             90 |
+|  clk_BUFG             | sw_IBUF[7]                |                                   |              232 |            900 |
++-----------------------+---------------------------+-----------------------------------+------------------+----------------+
+
+
