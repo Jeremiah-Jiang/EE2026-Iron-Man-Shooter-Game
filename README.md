@@ -1,5 +1,5 @@
 # EE2026-Iron-Man-Shooter-Game
-Iron Man Game created for EE2026 Open Ended Project
+Iron Man Game created for EE2026 Open Ended Project. Coded using Verilog.
 
 Below is a video of the game in action.
 
